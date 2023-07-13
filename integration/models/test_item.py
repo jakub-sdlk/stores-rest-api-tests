@@ -1,6 +1,7 @@
 from starter_code.models.item import ItemModel
 from starter_code.models.store import StoreModel
 from tests.general_base_test import GeneralBaseTest
+import pytest
 
 
 class ItemTest(GeneralBaseTest):
