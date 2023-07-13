@@ -1,5 +1,6 @@
 from starter_code.models.user import UserModel
 from tests.unit.unit_base_test import UnitBaseTest
+import pytest
 
 
 class UserTest(UnitBaseTest):

@@ -9,7 +9,7 @@ and makes sure that it is a new, blank database each time.
 from unittest import TestCase
 from starter_code.app import app
 from starter_code.db import db
-
+import pytest
 
 class GeneralBaseTest(TestCase):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///'
