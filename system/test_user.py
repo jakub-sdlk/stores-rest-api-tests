@@ -23,7 +23,7 @@ class UserTest(GeneralBaseTest):
 				)
 				auth_response = client.post(
 					'/auth',
-					data=json.dumps({'username': 'test', 'password': '1234'}),
+					json={'username': 'test', 'password': '1234'},
 					headers={'Content-Type': 'application/json'}
 				)
 
