@@ -1,6 +1,5 @@
 from starter_code.models.user import UserModel
 from tests.general_base_test import GeneralBaseTest
-import pytest
 
 
 class UserTest(GeneralBaseTest):

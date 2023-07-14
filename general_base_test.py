@@ -9,7 +9,7 @@ and makes sure that it is a new, blank database each time.
 from unittest import TestCase
 from starter_code.app import app
 from starter_code.db import db
-import pytest
+
 
 class GeneralBaseTest(TestCase):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///'
@@ -18,11 +18,8 @@ class GeneralBaseTest(TestCase):
     def setUpClass(cls):
         # This code happens only once at the initialization of the test class
         app.config['SQLALCHEMY_DATABASE_URI'] = GeneralBaseTest.SQLALCHEMY_DATABASE_URI
-        app.config['DEBUG'] = False
-        app.config['PROPAGATE_EXCEPTIONS'] = True
-
-        with app.app_context():
-            db.init_app(app)
+        app.config['DEBUG'] = True
+        app.config['TESTING'] = True
 
     def setUp(self):
         # Make sure database exists
